@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    
+    <script src="smooth-scrollbar.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <h1>Ran</h1>
+        <h2>A Multi-Dimensional Goldfish</h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">work</a>
+        </div>
+        <table>
+                <tr>
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a href="https://discord.gg/YHv473GY" target="_blank" class="social_discord"><i class="fab fa-discord"></i></a></td>
+                    
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a href="https://github.com/Ran-helo" target="_blank" class="social_github"><i class="fab fa-github"></i></a></td>
+                    
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a href="https://modrinth.com/user/Ran" target="_blank" class="social_modrinth"><i class="fas fa-wrench"></i></a></td>
+                </tr>
+        </table>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>Projects</h1>
+        <p>Stuff that I made/worked on</p>
+        <section>
+            <h2>Forgix</h2>
+            <p>A Gradle plugin/an Architectury addon that helps Minecraft modders to merge Fabric (also Quilt) &amp; Forge jars into one! 𝘸𝘢𝘩𝘩 𝘵𝘦𝘤𝘩𝘯𝘰𝘭𝘰𝘨𝘺</p>
+            <div id="used">
+                <div><i class="fas fa-coffee"></i>&nbsp;Java</div>
+            </div>
+            <button onclick="window.open('https://github.com/PacifistMC/Forgix#usage','_blank')" class="btn_one"><i class="fas fa-atlas"></i> Usage</button>
+            
+            <button onclick="window.open('https://github.com/PacifistMC/Forgix','_blank')" class="btn_two"><i class="far fa-file-zipper"></i> Source Code</button>
+        </section>
+        
+        <section>
+            <h2>Distant Horizons</h2>
+            <p>A mod that adds a Level of Detail System to Minecraft</p>
+            <p>This mod adds a Level Of Detail (LOD) system to Minecraft. This implementation renders simplified chunks outside the normal render distance allowing for an increased view distance without harming performance. In other words: this mod lets you see farther without turning your game into a slide show.
+            </p>
+            <div id="used">
+                <div><i class="fas fa-coffee"></i>&nbsp;Java</div>
+            </div>
+            <button onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/distant-horizons','_blank')" class="btn_one"><i class="fas fa-download"></i> Curseforge</button>
+            
+            <button onclick="window.open('https://modrinth.com/mod/distanthorizons','_blank')" class="btn_one"><i class="fas fa-download"></i> Modrinth</button>
+            
+            <button onclick="window.open('https://gitlab.com/jeseibel/minecraft-lod-mod','_blank')" class="btn_two"><i class="far fa-file-zipper"></i> Source Code</button>
+        </section>
+        
+        <section>
+            <h2>Horse Buff</h2>
+            <p>A mod that improves horses in Minecraft by removing stupid stuff and adding useful stuff.</p>
+            <div id="used">
+                <div><i class="fas fa-coffee"></i>&nbsp;Java</div>
+            </div>
+            <button onclick="window.open('https://modrinth.com/mod/horsebuff','_blank')" class="btn_one"><i class="fas fa-download"></i> Modrinth</button>
+            
+            <button onclick="window.open('https://github.com/CodeF53/Horse-Buff','_blank')" class="btn_two"><i class="far fa-file-zipper"></i> Source Code</button>
+        </section>
+        
+        <section>
+            <h2>UwUifier</h2>
+            <p>i-it uwuifies stuff fow you! >_<</p>
+            <div id="used">
+                <div><i class="fas fa-coffee"></i>&nbsp;Java</div>
+            </div>
+            <button onclick="window.open('https://modrinth.com/mod/uwuifier','_blank')" class="btn_one"><i class="fas fa-download"></i> Modrinth</button>
+            
+            <button onclick="window.open('https://github.com/Ran-helo/uwu','_blank')" class="btn_two"><i class="far fa-file-zipper"></i> Source Code</button>
+        </section>
+        
+        <section>
+            <p>And lots of private projects that I don't want to share</p>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+            <h1>about.</h1>
+            <section>
+                <h2>about me</h2>
+                <p>
+                    I don't really have anything to say about me
+                    <br>
+                    other than that I know Java &amp; C# and am learning Kotlin &amp; Rust 🦀
+                </p>
+                <br>
+                <p>My pronouns are any-- I am your cute she/he/they/it/are/we/yall/uwu</p>
+            </section>
+            <section>
+                <h2>skills</h2>
+                <p>
+                    If I know something is possible but people say it's impossible then I will always make it possible and show them that it indeed is possible
+                </p>
+            </section>
+        </div>
+        <div id="footer">
+            Thanks for visiting my page! ❤️
+        </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
