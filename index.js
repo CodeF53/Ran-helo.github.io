@@ -1,3 +1,17 @@
+function updateTime() {
+    document.getElementById("footer").innerHTML = "Thanks for visiting my page! ❤️ <br> Current Time: " + getCurrentRanTime();
+    setInterval(updateTime, 1000)
+}
+
+function getCurrentRanTime() {
+    var date = new Date(new Date().toLocaleString('en-US', { timeZone: 'GMT' }));
+
+    var diff = 21600000
+    var actualTime = new Date(date.getTime() + diff);
+
+    return actualTime.toLocaleString('en-UK' , { hour12: true });
+}
+
 function showabout(){
     $("#about_container").css("display","inherit");
     $("#about_container").addClass("animated slideInLeft");
@@ -5,6 +19,7 @@ function showabout(){
         $("#about_container").removeClass("animated slideInLeft");
     },800);
 }
+
 function closeabout(){
     $("#about_container").addClass("animated slideOutLeft");
     setTimeout(function(){
@@ -12,6 +27,7 @@ function closeabout(){
         $("#about_container").css("display","none");
     },800);
 }
+
 function showwork(){
     $("#work_container").css("display","inherit");
     $("#work_container").addClass("animated slideInRight");
@@ -19,6 +35,7 @@ function showwork(){
         $("#work_container").removeClass("animated slideInRight");
     },800);
 }
+
 function closework(){
     $("#work_container").addClass("animated slideOutRight");
     setTimeout(function(){
@@ -26,6 +43,7 @@ function closework(){
         $("#work_container").css("display","none");
     },800);
 }
+
 setTimeout(function(){
     $("#loading").addClass("animated fadeOut");
     setTimeout(function(){
