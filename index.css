@@ -187,12 +187,14 @@ body {
     color:rgb(108, 198, 68);
 }
 .social_modrinth {
-    color:#fff;
-    font-size:22px;
     border-radius:50%;
     transition:0.4s ease-in-out;
     margin:0px 8px;
     text-align:center;
+}
+.social_modrinth svg {
+    fill: #fff;
+    width: 22px;
 }
 .social_modrinth:hover { 
     cursor: pointer;
