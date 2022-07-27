@@ -195,6 +195,11 @@ body {
 .social_modrinth svg {
     fill: #fff;
     width: 22px;
+    transition: 0.4s ease-in-out;
+}
+.social_modrinth svg:hover {
+    cursor: pointer;
+    fill: #1bd96a;
 }
 .social_modrinth:hover { 
     cursor: pointer;
