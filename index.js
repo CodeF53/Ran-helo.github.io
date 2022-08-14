@@ -1,4 +1,3 @@
-// Run updateTime() in a separate thread
 setTimeout(updateTime, 1000);
 setInterval(updateTime, 1000);
 
