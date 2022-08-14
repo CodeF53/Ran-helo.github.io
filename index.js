@@ -1,13 +1,16 @@
+// Run updateTime() in a separate thread
+setTimeout(updateTime, 1000);
+setInterval(updateTime, 1000);
+
 function updateTime() {
-    document.getElementById("footer").innerHTML = "Thanks for visiting my page! ❤️ <br> Current Time: " + getCurrentRanTime();
-    setInterval(updateTime, 1000)
+    document.getElementById("footer").innerHTML = "Thanks for visiting my page! ❤️ <br> " + getCurrentRanTime();
 }
 
 function getCurrentRanTime() {
-    var date = new Date(new Date().toLocaleString('en-US', { timeZone: 'GMT' }));
+    const date = new Date(new Date().toLocaleString('en-US', {timeZone: 'GMT'}));
 
-    var diff = 21600000
-    var actualTime = new Date(date.getTime() + diff);
+    const diff = 21600000;
+    const actualTime = new Date(date.getTime() + diff);
 
     return actualTime.toLocaleString('en-UK' , { hour12: true });
 }
@@ -17,7 +20,7 @@ function showabout(){
     $("#about_container").addClass("animated slideInLeft");
     setTimeout(function(){
         $("#about_container").removeClass("animated slideInLeft");
-    },800);
+    },950);
 }
 
 function closeabout(){
@@ -25,7 +28,7 @@ function closeabout(){
     setTimeout(function(){
         $("#about_container").removeClass("animated slideOutLeft");
         $("#about_container").css("display","none");
-    },800);
+    },950);
 }
 
 function showwork(){
@@ -33,7 +36,7 @@ function showwork(){
     $("#work_container").addClass("animated slideInRight");
     setTimeout(function(){
         $("#work_container").removeClass("animated slideInRight");
-    },800);
+    },950);
 }
 
 function closework(){
@@ -41,7 +44,7 @@ function closework(){
     setTimeout(function(){
         $("#work_container").removeClass("animated slideOutRight");
         $("#work_container").css("display","none");
-    },800);
+    },950);
 }
 
 setTimeout(function(){
