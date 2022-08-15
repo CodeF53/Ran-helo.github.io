@@ -30,7 +30,7 @@
     </div>
     <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
     <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
-    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s; position: absolute; top: 123px;">
         <h1>Ran</h1>
         <h2>A Multi-Dimensional Goldfish</h2>
         <div id="menu">
@@ -39,8 +39,6 @@
         </div>
         <table>
                 <tr>
-                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a href="https://discord.gg/bxrKkqDM" target="_blank" class="social_discord"><i class="fab fa-discord"></i></a></td>
-                    
                     <td class="animated zoomIn" style="animation-delay:2.2s;"><a href="https://github.com/Ran-helo" target="_blank" class="social_github"><i class="fab fa-github"></i></a></td>
                     
                     <td class="animated zoomIn" style="animation-delay:2.2s;"><a href="https://modrinth.com/user/Ran" target="_blank" class="social_modrinth">
@@ -48,6 +46,8 @@
                     </a></td>
                 </tr>
         </table>
+
+        <div id="discord" style="position: relative; bottom: 30px"></div>
     </div>
     <div id="work_container" class="container">
         <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
@@ -123,7 +123,7 @@
             <h2>UwUifier</h2>
             <p>i-it uwuifies stuff fow you! >_<</p>
             <div id="used">
-                <div><i class="fas fa-coffee"></i>&nbsp;Java</div>
+                <div><i class="fas fa-coffee"></i> Java</div>
             </div>
             <button onclick="window.open('https://modrinth.com/mod/uwuifier','_blank')" class="btn_one"><i class="fas fa-download"></i> Modrinth</button>
             
@@ -159,6 +159,8 @@
         <div id="footer">
             Thanks for visiting my page! ❤️
         </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <script src="index.js" type="text/javascript"></script>
     <script src="particles.js"></script>
     <script src="app.js"></script>

@@ -1,6 +1,16 @@
 setTimeout(updateTime, 1000);
 setInterval(updateTime, 1000);
 
+fetchDiscordStatus();
+setTimeout(fetchDiscordStatus, 100000);
+setInterval(fetchDiscordStatus, 100000);
+
+function fetchDiscordStatus() {
+    document.getElementById('discord').innerHTML = marked.parse(
+        '[![Discord Presence](https://lanyard.cnrad.dev/api/721351466828300350?borderRadius=12px&animated=true&hideTimestamp=true&'+ Math.random() +')](https://discord.gg/bxrKkqDM)'
+    );
+}
+
 function updateTime() {
     document.getElementById("footer").innerHTML = "Thanks for visiting my page! ❤️ <br> " + getCurrentRanTime();
 }
