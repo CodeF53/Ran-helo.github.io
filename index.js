@@ -92,4 +92,3 @@ function openDiscordURL(protocol, notInstalledLink, timeOut) {
         window.location = protocol;
     }
 }
-//
