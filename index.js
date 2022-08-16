@@ -1,14 +1,14 @@
 setTimeout(updateTime, 1000);
 setInterval(updateTime, 1000);
 
-fetchDiscordStatus();
-setTimeout(fetchDiscordStatus, 100000);
-setInterval(fetchDiscordStatus, 100000);
+setTimeout(fetchDiscordStatus, 1000);
+setInterval(fetchDiscordStatus, 1000);
 
+const discordCard = document.getElementById("discordProfile");
 function fetchDiscordStatus() {
-    document.getElementById('discord').innerHTML = marked.parse(
-        '[![Discord Presence](https://lanyard.cnrad.dev/api/721351466828300350?borderRadius=12px&animated=true&hideTimestamp=true&'+ Math.random() +')](https://discord.gg/bxrKkqDM)'
-    );
+    if (isHover(discordCard)) {
+        $("#discord").attr("src", "https://lanyard.cnrad.dev/api/721351466828300350?borderRadius=5px&idleMessage=mewo&animated=true&bg=a&" + Math.random());
+    }
 }
 
 function updateTime() {
@@ -63,7 +63,32 @@ setTimeout(function(){
       $("#loading").css("display","none");
       $("#box").css("display","none");
       $("#about").removeClass("animated fadeIn");
-      $("#contact").removeClass("animated fadeIn");
       $("#work").removeClass("animated fadeIn");
     },1000);
 },1500);
+
+const isHover = e => e.parentElement.querySelector(':hover') === e;
+
+function openDiscordURL(protocol, notInstalledLink, timeOut) {
+    if (navigator.msLaunchUri) {
+        navigator.msLaunchUri(protocol, function () { },
+            function () {
+                window.location = notInstalledLink;
+            }
+        );
+    } else {
+        let timeout = timeOut;
+
+        window.addEventListener('blur', function () {
+                window.clearTimeout(timeout);
+            }
+        )
+
+        timeout = window.setTimeout(function () {
+                window.location = notInstalledLink;
+            }, timeOut
+        );
+
+        window.location = protocol;
+    }
+}

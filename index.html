@@ -30,7 +30,7 @@
     </div>
     <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
     <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
-    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s; position: absolute; top: 123px;">
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
         <h1>Ran</h1>
         <h2>A Multi-Dimensional Goldfish</h2>
         <div id="menu">
@@ -46,8 +46,10 @@
                     </a></td>
                 </tr>
         </table>
-
-        <div id="discord" style="position: relative; bottom: 30px"></div>
+    </div>
+    <div id="discordProfile" class="animated zoomIn" style="animation-delay:2.25s; z-index: 1">
+        <a id="discordLink" onclick="openDiscordURL('discord://-/users/721351466828300350', 'https://discord.com/users/721351466828300350', 3000)" class="discordLink"></a>
+        <iframe id="discord" height="218px" width="410px" class="discordCard" src="https://lanyard.cnrad.dev/api/721351466828300350?borderRadius=5px&idleMessage=mewo&animated=true&bg=a"></iframe>
     </div>
     <div id="work_container" class="container">
         <div onclick="closework()"><i class="fas fa-angle-right"></i></div>

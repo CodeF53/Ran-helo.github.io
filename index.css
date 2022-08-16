@@ -126,32 +126,11 @@ body {
     transition:0.4s ease-in-out;
     border-radius:0px 0px 100px 100px;
 }
-#contact {
-    width:10vw;
-    height:10vw;
-    text-align:center;
-    font-size:25px;
-    background:transparent;
-    color:#fff;
-    position:fixed;
-    bottom:0;
-    left:45vw;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    z-index:4;
-    transition:0.4s ease-in-out;
-    border-radius:100px 100px 0px 0px;
-}
 #about:hover {
     background:rgba(17, 87, 240, 0.9);
     cursor:pointer;
 }
 #work:hover {
-    background:rgba(17, 87, 240, 0.9);
-    cursor:pointer;
-}
-#contact:hover {
     background:rgba(17, 87, 240, 0.9);
     cursor:pointer;
 }
@@ -162,18 +141,33 @@ body {
 #middle table tr td {
     text-align:center;
 }
-.social_discord {
-    color:#fff;
-    font-size:22px;
-    border-radius:50%;
-    transition:0.4s ease-in-out;
-    margin:0px 8px;
-    text-align:center;
+
+#discordProfile {
+    height: 90px;
+    border-radius: 16px;
+    overflow: hidden;
+    width: max-content;
+    margin: 0 auto;
+    transition: 320ms ease-in-out;
+    position: relative;
+    top: 70.6%;
 }
-.social_discord:hover { 
+iframe.discordCard {
+    border: none;
+    background-color: rgba(0,0,0,42%);
+}
+#discordProfile:hover {
+    height: 214px;
     cursor: pointer;
-    color:rgb(114, 137, 218);
 }
+a.discordLink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .social_github {
     color:#fff;
     font-size:22px;
@@ -186,6 +180,7 @@ body {
     cursor: pointer;
     color:rgb(108, 198, 68);
 }
+
 .social_modrinth {
     border-radius:50%;
     transition:0.4s ease-in-out;
@@ -205,6 +200,7 @@ body {
     cursor: pointer;
     color: #1bd96a;
 }
+
 .container {
     width:90vw;
     height:90vh;
@@ -216,6 +212,7 @@ body {
     max-height:100vh;
     overflow-y:auto;
     display:none;
+    bottom: 0
 }
 .container div {
     font-size:25px;
@@ -360,9 +357,6 @@ body {
 
 @media (max-width: 800px){ 
     #about {
-        display:none;
-    }
-    #contact {
         display:none;
     }
     #work {
